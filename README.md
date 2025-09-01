@@ -28,3 +28,77 @@ Il tool simula un **workflow OSINT/forense**:
 ## ⚙️ Installazione
 ### Requisiti
 - **Python 3.9+**
+
+🖥️ Esempi d’uso
+1️⃣ Crea profilo digitale
+
+Input
+
+Soggetto: Mario Rossi
+Email: mario.rossi@mail.com
+Twitter: @marior
+Sito: https://rossi-investigazioni.it
+
+
+Output
+
+# Profilo Digitale — Mario Rossi
+- Email: mario.rossi@mail.com
+- Handle: @marior
+- URL: https://rossi-investigazioni.it
+- Dominio: rossi-investigazioni.it
+
+2️⃣ Verifica catena di custodia
+
+Input
+
+Percorso: documento.docx
+
+
+Output
+
+# Catena di Custodia — Inventario
+- File: documento.docx
+- SHA256: 3f785e1a...
+- MD5: 5d41402a...
+- Dimensione: 152 KB
+
+3️⃣ Crea timeline
+
+Input
+
+2025-08-28 15:30:00 | Accesso sospetto da IP 192.168.1.10 | Log server
+2025-08-28 15:45:00 | Reset password account Rossi | Gmail
+
+
+Output
+
+# Timeline
+| Data Orig. | UTC | Evento | Fonte |
+|------------|-----|--------|-------|
+| 2025-08-28 15:30:00 | 2025-08-28T13:30:00Z | Accesso sospetto... | Log server |
+| 2025-08-28 15:45:00 | 2025-08-28T13:45:00Z | Reset password...  | Gmail |
+
+4️⃣ Analizza dataset sospetto
+
+Input
+
+Percorso: dump_cartella
+
+
+Output
+
+# Dataset Triage Report
+- Root: dump_cartella
+- Elementi analizzati: 42
+
+## Rischi sintetici
+| Emails | Phones | IBAN | Secrets | JWT | PAN | Hashes | IP | URLs |
+|   3    |   0    |  1   |    2    |  0  |  1  |   5    |  2 |  4  |
+
+### dump1.txt
+- MIME: text/plain
+- Email: mario@esempio.it
+- IBAN IT: IT60X0542811101000000123456
+- Secret-like: api_key=ABCD1234...
+- Preview: `Login: mario | Pwd: Segreto123`
