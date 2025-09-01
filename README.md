@@ -92,10 +92,6 @@ Output
 - Root: dump_cartella
 - Elementi analizzati: 42
 
-## Rischi sintetici
-| Emails | Phones | IBAN | Secrets | JWT | PAN | Hashes | IP | URLs |
-|   3    |   0    |  1   |    2    |  0  |  1  |   5    |  2 |  4  |
-
 ### dump1.txt
 - MIME: text/plain
 - Email: mario@esempio.it
